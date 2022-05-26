@@ -1,5 +1,5 @@
 import './css/styles.css';
-import fcLib from './fetchCountries';
+import fetch from './fetchCountries';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
 
@@ -17,7 +17,7 @@ if( name === "") {
     return (countryInfo.innerHTML = ''),(countryList.innerHTML = '')
 }
 console.log(name)
-fcLib.fetchCountries(name)
+fetch.fetchCountries(name)
 .then(countries => {
     console.log(countries);
     countryInfo.innerHTML =''
